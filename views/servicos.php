@@ -27,29 +27,24 @@ include "../components/head.php";
                 <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
                     <!-- Serviço: Notebooks e PCs -->
-                    <div
-                        class="flex flex-col gap-4 rounded-xl border border-border-light dark:border-border-dark bg-secondary-light dark:bg-secondary-dark p-6 transition-shadow hover:shadow-lg">
-                        <div class="flex items-center gap-4">
-                            <div class="flex items-center justify-center rounded-lg size-12 bg-primary/10 text-primary">
-                                <span class="material-symbols-outlined">laptop_chromebook</span>
-                            </div>
-                            <h3 class="text-lg font-bold">Notebooks e PCs</h3>
-                        </div>
-                        <p class="text-sm text-text-muted-light dark:text-text-muted-dark">
-                            Manutenção preventiva, formatação, upgrade de hardware e otimização de desempenho para seu
-                            equipamento.
-                        </p>
-                        <div class="flex flex-col mt-auto space-y-2 sm:flex-row sm:space-y-0 sm:space-x-2">
-                            <button
-                                class="w-full px-4 py-2 text-sm font-semibold text-white rounded-lg bg-primary hover:bg-primary/90">
-                                Solicitar Orçamento
-                            </button>
-                            <button
-                                class="w-full px-4 py-2 text-sm font-semibold border rounded-lg text-primary border-primary/50 hover:bg-primary/10">
-                                Saiba Mais
-                            </button>
-                        </div>
-                    </div>
+                    <?php
+                    require '../components/card.php';
+                    ?>
+
+
+                    <?php
+                    renderCard(
+                        icon: "laptop_chromebook",
+                        title: "Notebooks e PCs",
+                        description: "Manutenção preventiva, formatação, upgrade de hardware e otimização de desempenho para seu equipamento.",
+                        btnPrimaryText: "Solicitar Orçamento",
+                        btnPrimaryLink: "orcamento.php",
+                        btnSecondaryText: "Saiba Mais",
+                        btnSecondaryLink: "servico.php"
+                    );
+                    ?>
+
+
 
                     <!-- Serviço: Videogames -->
                     <div
